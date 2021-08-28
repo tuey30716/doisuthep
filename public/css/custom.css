@@ -627,6 +627,7 @@ a {
 
 .navbar li {
   position: relative;
+  padding: 8px 0px;
 }
 
 .navbar a, .navbar a:focus {
