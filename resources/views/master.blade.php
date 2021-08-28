@@ -12,7 +12,7 @@
     <link href="{{asset('vendor/owlcarousel/css/owl.theme.default.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/lightbox2/lightbox.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/fontawesome/css/all.css')}}" rel="stylesheet"> 
-    <title>Hello, world!</title>
+    <title>Doisuthep</title>
   </head>
   
   <body>
@@ -29,59 +29,57 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle {{ request()->is('/') ? 'active' : '' }}" href="#box-publicize" id="publicize" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                ประชาสัมพันธ์
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="publicize">
-                  <li><a class="dropdown-item " href="{{route('home')}}#box-publicize">ข่าวประชาสัมพันธ์</a></li>
-                  <li><a class="dropdown-item" href="#box-context">บทความ</a></li>
-                  <li><a class="dropdown-item" href="#box-product">ของที่ระลึก</a></li>
-                  <li><a class="dropdown-item" href="#box-vedio">วิดีโอ</a></li>
-                  <li><a class="dropdown-item" href="#box-work">ร่วมงานกันเรา</a></li>
+               <li class="dropdown ">
+                 <a href="#box-context" class="nav-link {{ request()->is('/') ? 'active' : '' }}">
+                   <span>ประชาสัมพันธ์</span> <i class="fas fa-chevron-down"></i>
+                  </a>
+                <ul>
+                  <li><a href="#box-context">บทความ</a></li>
+                  <li><a href="#box-product">ของที่ระลึก</a></li>
+                  <li><a href="#box-vedio">วิดีโอ</a></li>
+                  <li><a href="#box-work">ร่วมงานกันเรา</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle {{request()->is('suthep*') ? 'active' : '' }}" href="#" id="type" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  ดอยสุเทพ
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="type">
-                  <li><a class="dropdown-item" href="{{route('suthep')}}">พืช</a></li>
-                  <li><a class="dropdown-item" href="#">สัตว์</a></li>
-                  <li><a class="dropdown-item" href="#">จุลินทรีย์และฟังไจ</a></li>
-                  <li><a class="dropdown-item" href="#">ธรณี</a></li>
-                  <li><a class="dropdown-item" href="#">ศิลปวัฒนธรรม</a></li>
+              <li class="dropdown ">
+                 <a href="{{route('suthep')}}" class="nav-link {{ request()->is('suthep*') ? 'active' : '' }}">
+                   <span>ดอยสุเทพ</span> <i class="fas fa-chevron-down"></i>
+                  </a>
+                <ul>
+                  <li><a href="#box-context">พืช</a></li>
+                  <li><a href="#box-product">สัตว์</a></li>
+                  <li><a href="#box-vedio">จุลินทรีย์และฟังไจ</a></li>
+                  <li><a href="#box-work">ธรณี</a></li>
+                  <li><a href="#box-work">ศิลปวัฒนธรรม</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="type" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  เกี่ยวกับเรา 
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="type">
-                  <li><a class="dropdown-item" href="#">รู้จักกับ DSNC</a></li>
-                  <li><a class="dropdown-item" href="#">วิสัยทัศน์ พันธกิจ ค่านิยม</a></li>
-                  <li><a class="dropdown-item" href="#">วิสัยทัศน์ พันธกิจ ค่านิยม</a></li>
-                  <li><a class="dropdown-item" href="#">สัญลักษณ์</a></li>
+              <li class="dropdown ">
+                 <a href="{{route('suthep')}}" class="nav-link ">
+                   <span>เกี่ยวกับเรา</span> <i class="fas fa-chevron-down"></i>
+                  </a>
+                <ul>
+                  <li><a href="#box-context">รู้จักกับ DSNC</a></li>
+                  <li><a href="#box-product">วิสัยทัศน์ พันธกิจ ค่านิยม</a></li>
+                  <li><a href="#box-vedio">สัญลักษณ์</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle {{request()->is('knowledge*') ? 'active' : '' }}" href="#" id="type" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  การให้บริการ 
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="type">
-                  <li><a class="dropdown-item" href="{{route('knowledge')}}">งานส่งเสริมการเรียนรู้</a></li>
-                  <li><a class="dropdown-item" href="#">งานกิจกรรมโครงการ</a></li>
-                  <li><a class="dropdown-item" href="#">งานบริการออนไลน์</a></li>
-                  <li><a class="dropdown-item" href="#">สถานที่และห้องประชุม</a></li>
+              <li class="dropdown ">
+                 <a href="{{route('knowledge')}}" class="nav-link {{request()->is('knowledge*') ? 'active' : '' }}">
+                   <span>เกี่ยวกับเรา</span> <i class="fas fa-chevron-down"></i>
+                  </a>
+                <ul>
+                  <li><a href="{{route('knowledge')}}">งานส่งเสริมการเรียนรู้</a></li>
+                  <li><a href="#">งานกิจกรรมโครงการ</a></li>
+                  <li><a href="#">งานบริการออนไลน์</a></li>
+                  <li><a href="#">สถานที่และห้องประชุม</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle {{request()->is('staff*') ? 'active' : '' }}" href="#" id="type" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                บุคลากร 
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="type">
-                  <li><a class="dropdown-item" href="{{route('staff')}}">ผู้บริหาร</a></li>
-                  <li><a class="dropdown-item" href="#">บุคลากร</a></li>
+              <li class="dropdown ">
+                 <a href="{{route('staff')}}" class="nav-link {{request()->is('staff*') ? 'active' : '' }}">
+                   <span>บุคลากร</span> <i class="fas fa-chevron-down"></i>
+                  </a>
+                <ul>
+                  <li><a href="#">ผู้บริหาร</a></li>
+                  <li><a href="#">บุคลากร</a></li>
                 </ul>
               </li>
             </ul>
@@ -129,6 +127,8 @@
       </div>
       <p class="mb-0 pt-30px text-center">© Copyright CMU STeP . All Rights Reserved</p>
     </footer>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center active">
+      <i class="fas fa-chevron-up"></i> </a>
     <script src="{{asset('js/jquery-3.6.0.js')}}"></script>
     <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('vendor/owlcarousel/owl.carousel.js')}}"></script>
