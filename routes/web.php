@@ -35,6 +35,7 @@ Route::get('/staff', [StaffController::Class,'index'])->name('staff');
 Route::get('/admin', [AdminController::Class,'index'])->name('admin');;
 Route::get('/admin/content', [AdminController::Class,'listContent']);
 Route::get('/admin/product', [AdminController::Class,'listProtuct']);
+Route::get('/admin/vedio', [AdminController::Class,'listVedio']);
 
 Route::resource('content', ContentController::Class);
 Route::resource('product', ProductController::Class);

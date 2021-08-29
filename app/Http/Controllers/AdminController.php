@@ -83,7 +83,6 @@ class AdminController extends Controller
 		return view('admin.content', compact('todo', 'type'));
 	}
 
-
 	public function listProtuct(Request $request)
 	{
 		$type = $request['type'];
@@ -118,6 +117,32 @@ class AdminController extends Controller
 		return view('admin.product', compact('todo', 'type'));
 	}
 
+	public function listVedio(Request $request)
+	{
+		$type = $request['type'];
+		
+			$todo = [
+				[
+					'id' => 1,
+					'link' => '',
+				],
+				[
+					'id' => 2,
+					'link' => '',
+				],	
+				[
+					'id' => 3,
+					'link' => '',
+				],
+				[
+					'id' => 4,
+					'link' => '',
+				],
+			];
+		
+		return view('admin.vedio', compact('todo', 'type'));
+	}
+	
 	public function viewContet(Request $request)
 	{
 		$todo = [
