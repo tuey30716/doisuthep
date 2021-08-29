@@ -8,6 +8,7 @@ use App\Http\Controllers\SuthepController;
 use App\Http\Controllers\KnowledgeController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\WorkController;
 
 // use App\Models\User;
 
@@ -36,9 +37,10 @@ Route::get('/admin', [AdminController::Class,'index'])->name('admin');;
 Route::get('/admin/content', [AdminController::Class,'listContent']);
 Route::get('/admin/product', [AdminController::Class,'listProtuct']);
 Route::get('/admin/vedio', [AdminController::Class,'listVedio']);
-
+Route::get('/admin/work', [AdminController::Class,'listWork']);
 Route::resource('content', ContentController::Class);
 Route::resource('product', ProductController::Class);
+Route::resource('work', WorkController::Class);
 
 // Route::resource('admin', AdminController::Class);
 

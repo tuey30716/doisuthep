@@ -12,7 +12,7 @@
                   <h2>ข่าวประชาสัมพันธ์</h2>
                 </div>
                 <div>
-                  <a href="{{route('content.create','type='.$type)}}" class="btn btn-success p-3 px-4" id="btn-add" data-toggle="modal" data-target="#formModal">
+                  <a href="{{route('content.create','type='.$type)}}" class="btn btn-success px-3  py-2" id="btn-add" data-toggle="modal" data-target="#formModal">
                   <i class="fas fa-plus-circle me-2"></i>  เพิ่มข้อมูล 
                   </a>
                 </div>

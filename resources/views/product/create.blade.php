@@ -4,7 +4,7 @@
 <div id="main-content">
   <div class="wrapper">
     <div class="col-12">
-      <a href="{{url('/admin/content?type=publicize')}}" class="btn btn-dark text-white font-12px px-2 py-2"> 
+      <a href="{{url('/admin/content?type=publicize')}}" class="btn btn-dark text-white font-12px p-1 "> 
         <i class="fas fa-arrow-circle-left me-2"></i>Back
       </a>
       <div class="card">
@@ -69,8 +69,8 @@
                 </div>
               </div>
               <div class="col-12 d-flex justify-content-end">
-                <button type="reset" class="btn btn-secondary  me-3 w-150px py-3">Reset</button>
-                <button type="submit" class="btn btn-success  w-150px py-3">Submit</button>
+                <button type="reset" class="btn btn-secondary  me-3 w-150px  py-2">Reset</button>
+                <button type="submit" class="btn btn-success  w-150px  py-2">Submit</button>
               </div>
             </from>
           </div>

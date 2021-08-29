@@ -1,3 +1,15 @@
+.bg-color-green {
+  background-color: #97C5AC;
+}
+
+.text-main {
+  color: #2E8B57;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
 @font-face {
   font-family: Kanit;
   src: url("../font/Kanit/Kanit-Regular.ttf");
@@ -828,5 +840,9 @@ a {
 
 .note-editing-area ul li {
   list-style: disc;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=custom.css.map */

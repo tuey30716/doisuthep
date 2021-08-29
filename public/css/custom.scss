@@ -7,6 +7,17 @@ $color-light: #f8f9fa;
 $color-dark: #212529;
 $color-main: #2E8B57;
 
+.bg-color-green {
+  background-color: #97C5AC
+}
+
+.text-main{
+  color: #2E8B57;
+}
+
+.h-100vh {
+  height: 100vh;
+}
 
 @font-face {
   font-family: Kanit;
@@ -760,4 +771,8 @@ a {
   ul li {
     list-style: disc;
   }
+}
+
+.hidden {
+  display: none;
 }
