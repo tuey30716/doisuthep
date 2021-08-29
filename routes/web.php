@@ -7,6 +7,7 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\SuthepController;
 use App\Http\Controllers\KnowledgeController;
 use App\Http\Controllers\StaffController;
+use App\Http\Controllers\ProductController;
 
 // use App\Models\User;
 
@@ -26,9 +27,19 @@ use App\Http\Controllers\StaffController;
 
 Route::resource('content', ContentController::Class);
 
-// Route::get('/admin', [AdminController::Class,'index'])->name('admin');
 
 Route::get('/', [UserController::Class,'index'])->name('home');
 Route::get('/suthep', [SuthepController::Class,'index'])->name('suthep');
 Route::get('/knowledge', [KnowledgeController::Class,'index'])->name('knowledge');
 Route::get('/staff', [StaffController::Class,'index'])->name('staff');
+Route::get('/admin', [AdminController::Class,'index'])->name('admin');;
+Route::get('/admin/content', [AdminController::Class,'listContent']);
+Route::get('/admin/product', [AdminController::Class,'listProtuct']);
+
+Route::resource('content', ContentController::Class);
+Route::resource('product', ProductController::Class);
+
+// Route::resource('admin', AdminController::Class);
+
+// Route::get('/admin-content', [AdminController::Class,'viewContet'])->name('addmin.content');;
+

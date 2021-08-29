@@ -10,7 +10,7 @@
       <div class="card">
         <div class="card-body ">
           <div class="col-12 px-3">
-            <h2>เพิ่มข่าวประชาสัมพันธ์</h2>
+            <h2>ของที่ระลึก</h2>
             @if($errors->any())
               <div class="alert alert-danger">
                 <strong>Whoops!</strong>
@@ -24,14 +24,14 @@
             @endif
           </div>
           <div class="col-12 px-3">
-            <form action="{{route('content.store') }}" method="post">
+            <form action="{{route('product.store') }}" method="post">
               @csrf
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                   <div class="form-group">
                     <label>รูปภาพ</label>
                     <div class="image-upload files">
-                      <div class="img-16by9 holder btn-change-image highlight-hover" >
+                      <div class="img-1by1 holder btn-change-image highlight-hover" >
                         <img src="" class="img-responsive image-preview">
                         <div class="icon-box">
                           <div class="icon-box-text">
@@ -41,31 +41,28 @@
                       <input type="file" name="profile_image" class="form-control hidden img-upload-file" data-files="true" accept="image/*">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label>วันที่ลงประกาศ </label>
-                    <input type="date" name="date" class="form-control">
-                  </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                   <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                       <div class="form-group">
-                        <label>หัวข้อภาษาไทย</label>
-                        <input type="text" name="title_th" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <label>รายละเอียดภาษาไทย</label>
-                        <textarea name="description_th" class="summer-note summernote" > </textarea>
+                        <label>ชื่อ</label>
+                        <input type="text" name="name" class="form-control">
                       </div>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                       <div class="form-group">
-                        <label>หัวข้อภาษาอังกฤษ</label>
-                        <input type="text" name="title_en" class="form-control">
+                        <label>ราคาขาย</label>
+                        <input type="text" name="price" class="form-control">
                       </div>
+                    </div>
+                    <div class="col-lg-6">
                       <div class="form-group">
-                        <label>รายละเอียดภาษาอังกฤษ</label>
-                        <textarea name="description_en" class="summer-note summernote" > </textarea>
+                        <label>สถานะ</label>
+                        <select name="status" class="form-control">
+                          <option value="0">ปิดการขาย</option>
+                          <option value="1">เปิดการขาย</option>
+                        </select>
                       </div>
                     </div>
                   </div>

@@ -23,7 +23,7 @@
       <tbody>
       @foreach ($data as $key => $value)
         <tr>
-          <td>{{++$i}}</td>
+          <td>{{++$i}}</td> 
           <td>{{$value->id}}</td>
           <td>{{$value->title}}</td>
           <td>{{ Str::limit($value->description, 100)}}</td>

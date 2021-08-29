@@ -34,6 +34,7 @@
                    <span>ประชาสัมพันธ์</span> <i class="fas fa-chevron-down"></i>
                   </a>
                 <ul>
+                  <li><a href="#box-context">ข่าวประชาสัมพันธ์</a></li>
                   <li><a href="#box-context">บทความ</a></li>
                   <li><a href="#box-product">ของที่ระลึก</a></li>
                   <li><a href="#box-vedio">วิดีโอ</a></li>
@@ -82,13 +83,14 @@
                   <li><a href="#">บุคลากร</a></li>
                 </ul>
               </li>
+             
             </ul>
           </div>
         </div>
       </nav>
     </div>
     @yield('content')
-    <footer id="footer" class="bg-night-rider text-desciption   font-14">
+    <footer id="footer" class="bg-night-rider text-desciption  font-14">
       <div class="footer-top">
         <div class="container">
           <div class="row">

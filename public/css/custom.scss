@@ -72,6 +72,38 @@ $color-main: #2E8B57;
     box-shadow: 0 0 0 0.2rem #2e8b5681;
   }
 }
+
+.btn-back {
+  color: rgb(10, 10, 10);
+  background-color: #bdbdbd;
+  border-color:#bbbbbb;
+  border-radius: 0;
+  &:hover {
+    color: rgb(10, 10, 10);
+    background-color: #acacac;
+    border-color:#acacac;
+  }
+  &:focus, &.focus {
+    box-shadow: 0 0 0 0.2rem #bdbdbd;
+  }
+  &.disabled, &:disabled {
+    color: rgb(10, 10, 10);
+    background-color: #bdbdbd;
+    border-color:#bbbbbb;
+  }
+  &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: rgb(10, 10, 10);
+    background-color: #acacac;
+    border-color:#acacac;
+  }
+
+  &:not(:disabled):not(.disabled):active:focus, &:not(:disabled):not(.disabled).active:focus,
+  .show > &.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #2e8b5681;
+  }
+}
+
 body {
   font-family: "Kanit";
 }
@@ -488,6 +520,9 @@ a {
   padding-top:78px;
   p {
     color: $color-main;
+    i{
+      margin-right: 5px;
+    }
   }
   h3 {
     font-size: 32px;
@@ -571,8 +606,6 @@ a {
 
 .navbar li {
   position: relative;
-  padding: 8px 0px;
-
 }
 
 .navbar a, .navbar a:focus {
@@ -621,7 +654,7 @@ a {
 }
 
 .navbar .dropdown ul a {
-  padding: 10px 20px;
+  padding: 5px  15px;
   text-transform: none;
   color: #666666;
 }
@@ -659,5 +692,72 @@ a {
   }
   .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
+  }
+}
+
+.w-150px {
+  width: 150px;
+  min-width: 150px;
+}
+
+.w-250px {
+  width: 250px;
+  min-width: 250px;
+}
+
+.w-100px {
+  width: 100px;
+  min-width: 100px;
+}
+
+.font-12px {
+  font-size: 12px;
+}
+
+.image-upload {
+  position: relative;
+}
+
+.image-upload .btn-change-image {
+  background-color: #e9eef1;
+  background-image: url(../images/Placeholder.jpg);
+  background-size: 70%;
+  border: 1px solid #c3c8ca;;
+
+}
+
+.image-upload .btn-change-image.has-image {
+  background-image: none !important;
+}
+
+.image-upload .btn-change-image:not(.has-image)>img {
+  display: none;
+}
+
+.image-upload .btn-change-image:hover {
+  cursor: pointer;
+}
+
+.image-upload .btn-remove-image {
+  font-size: initial;
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  top: 5px;
+  font-size: 20px;
+  color: #ff0000;
+}
+
+.image-upload .img-upload-file {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.image-upload .no-gutters .btn-remove-image {
+  right: 5px;
+}
+.note-editing-area{
+  ul li {
+    list-style: disc;
   }
 }
