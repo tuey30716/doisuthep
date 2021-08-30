@@ -9,7 +9,7 @@
             <div class="col-12">
               <div class="d-flex flex-wrap justify-content-between align-items-center">
                 <div class="p-2 ">
-                  <h2>ข่าวประชาสัมพันธ์</h2>
+                  <h2>{{$type_text}}</h2>
                 </div>
                 <div>
                   <a href="{{route('content.create','type='.$type)}}" class="btn btn-success px-3  py-2" id="btn-add" data-toggle="modal" data-target="#formModal">

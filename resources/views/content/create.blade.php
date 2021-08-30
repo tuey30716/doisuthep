@@ -4,13 +4,13 @@
 <div id="main-content">
   <div class="wrapper">
     <div class="col-12">
-      <a href="{{url('/admin/content?type=publicize')}}" class="btn btn-dark text-white font-12px p-1"> 
+      <a href="{{url('/admin/content?type='.$type)}}" class="btn btn-dark text-white font-12px p-1"> 
         <i class="fas fa-arrow-circle-left me-2"></i>Back
       </a>
       <div class="card">
         <div class="card-body ">
           <div class="col-12 px-3">
-            <h2>เพิ่มข่าวประชาสัมพันธ์</h2>
+            <h2>{{$type_text}}</h2>
             @if($errors->any())
               <div class="alert alert-danger">
                 <strong>Whoops!</strong>
@@ -24,7 +24,7 @@
             @endif
           </div>
           <div class="col-12 px-3">
-            <form action="{{route('content.store') }}" method="post">
+            <form action="{{route('content.store')}}" method="post">
               @csrf
               <div class="row">
                 <div class="col-lg-4">
@@ -41,10 +41,29 @@
                       <input type="file" name="profile_image" class="form-control hidden img-upload-file" data-files="true" accept="image/*">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-2">
                     <label>วันที่ลงประกาศ </label>
                     <input type="date" name="date" class="form-control">
                   </div>
+                  @if($type == 'learning')
+                  <div class="form-group mt-2">
+                    <label>หมวดหมู่ </label>
+                    <select name="type" class="form-control">
+                      <option value="">นิทรรศการ (Exhibition)</option>
+                      <option value="">นิทรรศการธรรมชาติบันดาลใจ (Mother Nature)</option>
+                    </select>
+                  </div>
+                  @endif
+
+                  @if($type == 'project')
+                  <div class="form-group mt-2">
+                    <label>หมวดหมู่ </label>
+                    <select name="type" class="form-control" >
+                      <option value="">ท่องเที่ยวพรรณไม้งาม มช.</option>
+                      <option value=""> เรือนเพาะชำกล้าไม้ท้องถิ่น (Native Tree Species Nursery)</option>
+                    </select>
+                  </div>
+                  @endif
                 </div>
                 <div class="col-lg-8">
                   <div class="row">

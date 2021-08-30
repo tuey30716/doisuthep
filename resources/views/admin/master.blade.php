@@ -34,16 +34,6 @@
         <div class="top-nav notification-row">
           <ul class="nav pull-right top-menu">
             <a href=""> <h4> Log out</h4></a> 
-            <!-- <div class="btn-group" role="group">
-              <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-              </ul>
-            </div>
-          </ul> -->
         </div>
       </header>
       <!--header end-->
@@ -67,51 +57,28 @@
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-              <i class="icon_desktop"></i>
-              <span>UI Fitures</span>
+              <i class="icon_document_alt"></i>
+              <span>ดอยสุเทพ</span>
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class="" href="general.html">Components</a></li>
-              <li><a class="" href="buttons.html">Buttons</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
-            </ul>
-          </li>
-          <li>
-            <a class="" href="widgets.html">
-              <i class="icon_genius"></i>
-              <span>Widgets</span>
-            </a>
-          </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
-              <i class="icon_piechart"></i>
-              <span>Charts</span>
-            </a>
-          </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-              <i class="icon_table"></i>
-              <span>Tables</span>
-              <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-              <li><a class="active" href="basic_table.html">Basic Table</a></li>
+              <li><a class="" href="{{url('/admin/content?type=plant')}}">พืช </a></li>
+              <li><a class="" href="{{url('/admin/content?type=animal')}}">สัตว์</a></li>
+              <li><a class="" href="{{url('/admin/content?type=fungi')}}">จุลินทรีย์และฟังไจ</a></li>
+              <li><a class="" href="{{url('/admin/content?type=land')}}">ธรณี</a></li>
+              <li><a class="" href="{{url('/admin/content?type=culture')}}">ศิลปวัฒนธรรม</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-              <i class="icon_documents_alt"></i>
-              <span>Pages</span>
+              <i class="icon_document_alt"></i>
+              <span>การให้บริการ</span>
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
-              <li><a class="" href="login.html"><span>Login Page</span></a></li>
-              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
-              <li><a class="" href="blank.html">Blank Page</a></li>
-              <li><a class="" href="404.html">404 Error</a></li>
+              <li><a class="" href="{{url('/admin/content?type=learning')}}">งานส่งเสริมการเรียนรู้ </a></li>
+              <li><a class="" href="{{url('/admin/content?type=project')}}">งานกิจกรรมโครงการ</a></li>
+              <li><a class="" href="{{url('/admin/content?type=online')}}">งานบริการออนไลน์</a></li>
             </ul>
           </li>
         </ul>

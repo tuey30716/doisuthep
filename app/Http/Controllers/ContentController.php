@@ -14,10 +14,23 @@ class ContentController extends Controller
 
         return view('content.index', compact('data'))->with('i', (request()->input('page', 1)-1) * 5);
     }
-
     public function create(Request $request)
     {
-        return view('content.create');
+        $type_list = [
+			'publicize' => 'ข่าวประชาสัมพันธ์',
+			'context' => 'บทความ',
+			'plant' => 'พืช',
+			'animal' => 'สัตว์',
+			'fungi' => 'จุลินทรีย์และฟังไจ',
+			'land' => 'ธรณี',
+			'culture' => 'ศิลปวัฒนธรรม',
+			'learning' => 'งานส่งเสริมการเรียนรู้',
+			'project' => 'งานกิจกรรมโครงการ',
+			'online' => 'งานบริการออนไลน์',
+		];
+		$type = $request['type'];
+		$type_text = isset($type_list[$type])? $type_list[$type] :'' ;
+        return view('content.create', compact('type', 'type_text'));
     }
 
   

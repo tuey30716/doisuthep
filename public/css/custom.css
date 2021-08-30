@@ -845,4 +845,8 @@ a {
 .hidden {
   display: none;
 }
+
+.p-20per {
+  padding-top: 20%;
+}
 /*# sourceMappingURL=custom.css.map */

@@ -43,7 +43,20 @@ class AdminController extends Controller
 
 	public function listContent(Request $request)
 	{
+		$type_list = [
+			'publicize' => 'ข่าวประชาสัมพันธ์',
+			'context' => 'บทความ',
+			'plant' => 'พืช',
+			'animal' => 'สัตว์',
+			'fungi' => 'จุลินทรีย์และฟังไจ',
+			'land' => 'ธรณี',
+			'culture' => 'ศิลปวัฒนธรรม',
+			'learning' => 'งานส่งเสริมการเรียนรู้',
+			'project' => 'งานกิจกรรมโครงการ',
+			'online' => 'งานบริการออนไลน์',
+		];
 		$type = $request['type'];
+		$type_text = isset($type_list[$type])? $type_list[$type] :'' ;
 		if($request['type'] == 'vedio') {
 			$todo = [];
 		} else {
@@ -80,7 +93,7 @@ class AdminController extends Controller
 			];
 		}
 		
-		return view('admin.content', compact('todo', 'type'));
+		return view('admin.content', compact('todo', 'type', 'type_text'));
 	}
 
 	public function listProtuct(Request $request)
