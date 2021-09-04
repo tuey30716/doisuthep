@@ -9,7 +9,7 @@ use App\Http\Controllers\KnowledgeController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WorkController;
-
+// use App\Http\Controllers\LanguageController;
 // use App\Models\User;
 
 /*
@@ -26,13 +26,14 @@ use App\Http\Controllers\WorkController;
 //parameters
 // Route::get('post/{slug}', [UserController::Class,'show'])->name('show');
 
-Route::resource('content', ContentController::Class);
+// Route::resource('content', ContentController::Class);
 
-
-Route::get('/', [UserController::Class,'index'])->name('home');
-Route::get('/suthep', [SuthepController::Class,'index'])->name('suthep');
-Route::get('/knowledge', [KnowledgeController::Class,'index'])->name('knowledge');
-Route::get('/staff', [StaffController::Class,'index'])->name('staff');
+// Route::get('/home', [UserController::Class,'index']);
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
+Route::get('/', [UserController::Class,'index']);
+Route::get('/suthep', [SuthepController::Class,'index']);
+Route::get('/service', [KnowledgeController::Class,'index']);
+Route::get('/empolyee/{type}', [StaffController::Class,'index']);
 Route::get('/admin', [AdminController::Class,'index'])->name('admin');;
 Route::get('/admin/content', [AdminController::Class,'listContent']);
 Route::get('/admin/product', [AdminController::Class,'listProtuct']);
@@ -44,5 +45,5 @@ Route::resource('work', WorkController::Class);
 
 // Route::resource('admin', AdminController::Class);
 
-// Route::get('/admin-content', [AdminController::Class,'viewContet'])->name('addmin.content');;
+// Route::get('/admin-content', [AdminController::Class,'viewContet'])->name('addmin.content');
 

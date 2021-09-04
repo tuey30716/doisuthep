@@ -20,32 +20,43 @@
     </div>
   </div>
   <div class="container">
-      <selected id="detail"> 
-        <div class="row mt-5">
-          <div class="col-lg-7" >
-            <p class="mb-3 font-SemiBold">ศูนย์ธรรมชาติวิทยาดอยสุเทพเฉลิมพระเกียรติฯ มหาวิทยาลัยเชียงใหม่</p>   
-            <p class="mb-3 font-SemiBold">Doi Suthep Nature Center, Chiang Mai University </p>   
-            <p>
-              เป็นแหล่งเรียนรู้ด้านธรรมชาติวิทยา นิเวศวิทยา ธรรมชาติและสิ่งแวดล้อม ผ่านการจัดแสดง
-              นิทรรศการ กิจกรรม/โครงการ และการอบรมบริการวิชาการต่าง ๆ แก่กลุ่มเป้าหมายซึ่งเป็น
-              เด็ก เยาวชน ครอบครัว และบุคคลทั่วไป อีกทั้งยังให้บริการข้อมูลด้านธรรมชาติวิทยา
-              ดอยสุเทพ เพื่อถ่ายทอดความรู้ความเข้าใจตลอดจนสร้างความตระหนักแก่ชุมชนให้เห็นความ   สำคัญของการรักษาสิ่งแวดล้อม
-              และอนุรักษ์ทรัพยากรธรรมชาติ โดยเฉพาะอย่างยิ่งในพื้นที่ดอยสุเทพ นอกจากนั้น 
-              ศูนย์ฯ ยังถือเป็นตัวกลางในการสร้างเครือข่ายและพื้นที่แลกเปลี่ยนเรียนรู้เพื่อส่งเสริม
-              ชุมชนให้เป็นมิตรกับสิ่งแวดล้อม	
-            </p>   
-          </div>
-          <div class="col-lg-5">
-            <div class="ratio ratio-16x9">
-              <iframe  src="https://www.youtube.com/embed/lm9-N4W-jWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+    <selected  > 
+      <div class="row pt-76">
+        <div class="col-lg-7" >
+          <p class="mb-3 font-SemiBold">ศูนย์ธรรมชาติวิทยาดอยสุเทพเฉลิมพระเกียรติฯ มหาวิทยาลัยเชียงใหม่</p>   
+          <p class="mb-3 font-SemiBold">Doi Suthep Nature Center, Chiang Mai University </p>   
+          <p>
+            เป็นแหล่งเรียนรู้ด้านธรรมชาติวิทยา นิเวศวิทยา ธรรมชาติและสิ่งแวดล้อม ผ่านการจัดแสดง
+            นิทรรศการ กิจกรรม/โครงการ และการอบรมบริการวิชาการต่าง ๆ แก่กลุ่มเป้าหมายซึ่งเป็น
+            เด็ก เยาวชน ครอบครัว และบุคคลทั่วไป อีกทั้งยังให้บริการข้อมูลด้านธรรมชาติวิทยา
+            ดอยสุเทพ เพื่อถ่ายทอดความรู้ความเข้าใจตลอดจนสร้างความตระหนักแก่ชุมชนให้เห็นความ   สำคัญของการรักษาสิ่งแวดล้อม
+            และอนุรักษ์ทรัพยากรธรรมชาติ โดยเฉพาะอย่างยิ่งในพื้นที่ดอยสุเทพ นอกจากนั้น 
+            ศูนย์ฯ ยังถือเป็นตัวกลางในการสร้างเครือข่ายและพื้นที่แลกเปลี่ยนเรียนรู้เพื่อส่งเสริม
+            ชุมชนให้เป็นมิตรกับสิ่งแวดล้อม	
+          </p>   
+        </div>
+        <div class="col-lg-5">
+          <div class="ratio ratio-16x9">
+            <iframe  src="https://www.youtube.com/embed/lm9-N4W-jWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
-      </section>
-      <section id="box-publicize" class="wow fadeInDown" >
-        <div class="header-selected">
-          <h3>ประชาสัมพันธ์</h3>
-          <p><i class="fa fa-bullhorn"></i> ข่าวประชาสัมพันธ์</p>
+      </div>
+    </section>
+    <section id="box-dsnc" class="wow fadeInDown" >
+      <div class="header-selected pt-10px">
+        <h3>{{__('message.aboutUs')}}</h3>
+        <p><i class="fa fa-bullhorn"></i>{{__('message.aboutDSNC')}}</p>
+      </div>
+    </section>
+    <hr class="mb-5">
+  </div>
+  <div class="bg-section">
+    <div class="container">
+      <!-- ประชาสัมพันธ์ -->
+      <section id="box-news" class="wow fadeInDown" >
+        <div class="header-selected pt-10px">
+          <h3>{{__('message.news_menu')}}</h3>
+          <p><i class="fa fa-bullhorn"></i>{{__('message.news')}}</p>
         </div>
         <div class="row">
           @for ($i = 0; $i < 3; $i++)
@@ -71,38 +82,16 @@
             </div>
           @endfor
           <div class="col-lg-12 d-flex justify-content-end">
-            <a href="news.php" class="btn btn-main btn-sm"><i class="fa fa-arrow-right"></i> เพิ่มเติม</a>
+            <a href="news.php" class="btn btn-main btn-sm "><i class="fa fa-arrow-right me-2"></i>{{__('message.more')}}</a>
           </div>
         </div>
       </section>
-      <section id="box-context" class="wow fadeInDown " >
+      <section id="box-articles" class="wow fadeInDown " >
         <div class="header-selected ">
-          <p><i class="fa fa-bullhorn"></i> บทความ</p>
+          <p><i class="fa fa-bullhorn"></i>{{__('message.articles')}}</p>
         </div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
         <div class="row">
-        @for ($i = 0; $i < 3; $i++)
+          @for ($i = 0; $i < 3; $i++)
             <div class="col-md-4">
               <div class="card card-box mb-3">
                 <div class="highlight-hover">
@@ -125,13 +114,13 @@
             </div>
           @endfor
           <div class="col-lg-12 d-flex justify-content-end">
-            <a href="news.php" class="btn btn-main btn-sm "><i class="fa fa-arrow-right"></i> เพิ่มเติม</a>
+            <a href="news.php" class="btn btn-main btn-sm "><i class="fa fa-arrow-right me-2"></i>{{__('message.more')}}</a>
           </div>
         </div>
       </section> 
-      <section id="box-product" class="wow fadeInDown mt-5" >
+      <section id="box-souvenirs" class="wow fadeInDown mt-5" >
         <div class="header-selected">
-          <p><i class="fa fa-bullhorn"></i> ของที่ระลึก</p>
+          <p><i class="fa fa-bullhorn"></i>{{__('message.souvenirs')}}</p>
         </div>
         <div class="col-12">
           <div id="owl_product" class="owl-carousel">
@@ -156,10 +145,10 @@
       </section> 
       <section id="box-vedio" class="wow fadeInDown mt-5" >
         <div class="header-selected">
-          <p><i class="fa fa-bullhorn"></i> วิดีโอ</p>
+          <p><i class="fa fa-bullhorn"></i>{{__('message.video')}}</p>
         </div>
         <div class="row">
-           <?php for($i=0; $i<4; $i++) { ?>
+            <?php for($i=0; $i<4; $i++) { ?>
             <div class="col-md-6 mb-4">
               <div class="ratio ratio-21x9">
                 <iframe  src="https://www.youtube.com/embed/lm9-N4W-jWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -168,9 +157,9 @@
           <?php  } ?>
         </div>
       </section> 
-      <section id="box-work" class="wow fadeInDown mt-5 mb-5" >
+      <section id="box-join" class="wow fadeInDown mt-5 pb-5" >
         <div class="header-selected">
-          <p><i class="fa fa-bullhorn"></i> ร่วมงานกับเรา</p>
+          <p><i class="fa fa-bullhorn"></i> {{__('message.join')}}</p>
         </div>
         <div class="row">
           <div class="col-12">
@@ -181,7 +170,7 @@
                     <td class="text-grey">
                       <span style="font-size:14px;">
                         <i class="far fa-calendar-alt"></i> 16 ก.ค. 2564 | ประกาศรายชื่อผู้มีสิทธิ์สอบรอบแรกตำแหน่งพนักงานบริหารงานทรัพย์สินทางปัญญา                       
-                        <a class="text-link" href="">รายละเอียด</a>
+                        <a class="text-link" href="">{{__('message.detail')}}</a>
                       </span>
                     </td>
                   </tr>
@@ -190,11 +179,13 @@
             </table>
           </div>
           <div class="col-lg-12 d-flex justify-content-end ">
-            <a href="news.php" class="btn btn-main btn-sm"><i class="fa fa-arrow-right"></i> เพิ่มเติม</a>
+            <a href="news.php" class="btn btn-main btn-sm "><i class="fa fa-arrow-right me-2"></i>{{__('message.more')}}</a>
           </div>        
         </div>
       </section> 
     </div>
+  </div>
+
 @endsection
 
 @section('footer')

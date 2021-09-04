@@ -197,29 +197,36 @@ class AdminController extends Controller
 
 	public function viewContet(Request $request)
 	{
+
+		$type = 'product';
+		
 		$todo = [
 			[
 				'id' => 1,
-				'title' => 'Mocup',
-				'description' => 'Mocup',
+				'price' => 200,
+				'name' => 'สินค้า',
+				'status' => 0
 			],
 			[
 				'id' => 2,
-				'title' => 'Mocup',
-				'description' => 'Mocup',
+				'price' => 200,
+				'name' => 'สินค้า',
+				'status' => 1
 			],	
 			[
 				'id' => 3,
-				'title' => 'Mocup',
-				'description' => 'Mocup',
+				'price' => 200,
+				'name' => 'สินค้า',
+				'status' => 1
 			],
 			[
 				'id' => 4,
-				'title' => 'Mocup',
-				'description' => 'Mocup',
+				'price' => 200,
+				'name' => 'สินค้า',
+				'status' => 0
 			],
 		];
-		return response()->json($todo);
+	 	return view('admin.product', compact('todo', 'type'));
 	}
 
 	// public function create()

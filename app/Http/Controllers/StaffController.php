@@ -11,14 +11,14 @@ class StaffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($type)
     {
         $list = [
 			"/images/cover3.jpg",
 			"/images/cover2.jpg",
 			"/images/image-5.jpg", 
 		];
-        return view('staff', compact('list'));
+        return view('staff', compact('list', 'type'));
     }
 
     /**

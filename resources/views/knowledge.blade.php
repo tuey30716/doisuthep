@@ -229,18 +229,3 @@
       </section>
     </div>
 @endsection
-
-@section('footer')
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-      if (scroll >= 97) {
-        $(".header-menu ").addClass("header-dark");
-      } else {
-        $(".header-menu ").removeClass("header-dark");
-      }
-    });
-  });
-</script>
-@endsection

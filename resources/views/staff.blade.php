@@ -7,7 +7,12 @@
     <section id="box-publicize">
       <div class="header-selected pt-0">
         <h3>
-          คณะผู้บริหาร <br>
+          @if($type == 'administrator') 
+            {{__('message.administrator')}}
+          @else 
+            {{__('message.staff')}}
+          @endif
+          <br>
           <p class="text-secondary  mb-0 text-normal">Excutive</p>
         </h3>
       </div>

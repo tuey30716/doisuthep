@@ -2,9 +2,9 @@
 
 @section('content')
   <div class="container pt-30px mb-5">
-    <section id="box-publicize" class="wow fadeInDown" >
-      <div class="header-selected pt-0">
-        <h3>ดอยสุเทพ</h3>
+    <section id="box-plants" class="wow fadeInDown" >
+      <div class="header-selected pt-20px">
+        <h3>{{__('message.doi_suthep')}}</h3>
       </div>
       <div class="row">
         <div class="col-12">
@@ -13,9 +13,9 @@
       </div>
     </section>
     @foreach($data_topic as $key => $topic) 
-    <section id="box-context<?=$key?>" class="wow fadeInDown " >
+    <section id="{{$topic_name[$key]}}" class="wow fadeInDown " >
       <div class="header-selected ">
-        <p><i class="fa fa-bullhorn"></i>{{$topic['topic']}} </p>
+        <p><i class="fa fa-bullhorn"></i>{{__('message.'.$topic["topic"])}} </p>
       </div>
       <div class="row">
         <div class="col-12">
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="col-lg-12 d-flex justify-content-end">
-          <a href="news.php" class="btn btn-main btn-sm "><i class="fa fa-arrow-right"></i> เพิ่มเติม</a>
+          <a href="news.php" class="btn btn-main btn-sm "><i class="fa fa-arrow-right me-2"></i>{{__('message.more')}}</a>
         </div>
       </div>
     </section> 
