@@ -67,10 +67,10 @@
                     <img src="{{URL::asset($list[$i])}}" class="img-responsive image-preview" >
                   </div>
                   <div class="show-hover">
-                    <a href="{{URL::asset($list[$i])}}" class="me-3" data-lightbox="portfolio"  title="ดูรูปภาพ">
+                    <a href="{{URL::asset($list[$i])}}" class="me-3" data-lightbox="news"  title="ดูรูปภาพ">
                       <i class="far fa-image"></i>
                     </a>
-                    <a href="" title="รายละเอียด">
+                    <a href="{{url('news-detail/news/1')}}" title="รายละเอียด">
                       <i class="fas fa-eye"></i>
                     </a>
                   </div>
@@ -82,7 +82,7 @@
             </div>
           @endfor
           <div class="col-lg-12 d-flex justify-content-end">
-            <a href="news.php" class="btn btn-main btn-sm "><i class="fa fa-arrow-right me-2"></i>{{__('message.more')}}</a>
+            <a href="{{url('news/news')}}" class="btn btn-main btn-sm "><i class="fa fa-arrow-right me-2"></i>{{__('message.more')}}</a>
           </div>
         </div>
       </section>
@@ -114,9 +114,9 @@
             </div>
           @endfor
           <div class="col-lg-12 d-flex justify-content-end">
-            <a href="news.php" class="btn btn-main btn-sm "><i class="fa fa-arrow-right me-2"></i>{{__('message.more')}}</a>
+            <a href="{{url('news/articles')}}" class="btn btn-main btn-sm "><i class="fa fa-arrow-right me-2"></i>{{__('message.more')}}</a>
           </div>
-        </div>
+        </div> 
       </section> 
       <section id="box-souvenirs" class="wow fadeInDown mt-5" >
         <div class="header-selected">

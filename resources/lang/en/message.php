@@ -32,6 +32,7 @@
     'contact' => 'Contact',
     'more' => 'More.',
     'detail' => 'Detail.',
+    'map' => 'Map',
     'organization_name' => 'ศูนย์ธรรมชาติวิทยาดอยสุเทพเฉลิมพระเกียรติฯ คณะวิทยาศาสตร์ มหาวิทยาลัยเชียงใหม่',
     'organization_adress' => '239 ถนนห้วยแก้ว ตำบลสุเทพ อำเภอเมือง จังหวัดเชียงใหม่ 50200',
     'organization_email' => 'อีเมล: doisuthep.center@cmu.ac.th ',

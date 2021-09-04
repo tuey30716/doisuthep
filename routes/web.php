@@ -31,9 +31,13 @@ use App\Http\Controllers\WorkController;
 // Route::get('/home', [UserController::Class,'index']);
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
 Route::get('/', [UserController::Class,'index']);
-Route::get('/suthep', [SuthepController::Class,'index']);
-Route::get('/service', [KnowledgeController::Class,'index']);
-Route::get('/empolyee/{type}', [StaffController::Class,'index']);
+Route::get('/news/{type}', [UserController::Class,'news']);
+Route::get('/news-detail/{type}/{id}', [UserController::Class,'news_detail']);
+Route::get('/news/{type}', [UserController::Class,'news']);
+Route::get('/services', [UserController::Class,'services']);
+Route::get('/suthep', [UserController::Class,'suthep']);
+Route::get('/empolyee/{type}', [UserController::Class,'empolyee']);
+
 Route::get('/admin', [AdminController::Class,'index'])->name('admin');;
 Route::get('/admin/content', [AdminController::Class,'listContent']);
 Route::get('/admin/product', [AdminController::Class,'listProtuct']);
